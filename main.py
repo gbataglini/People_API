@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def greet():
-    return 'holy hell'
+    return 'Hello!'
 
 
 @app.route('/people')
