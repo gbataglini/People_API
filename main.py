@@ -28,13 +28,6 @@ def new_person():
     return person
 
 
-#@app.route('/people/<int:id>', methods=['PATCH'])
-# def update_person(id):
-#     deets = request.get_json()
-#     index = get_index(id, people)
-#
-#     return person
-
 @app.route('/people/<int:id>', methods=['DELETE'])
 def del_person(id):
     deleted = delete_person(id)
