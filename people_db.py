@@ -78,7 +78,7 @@ def add_person(newperson):
     cur.close()
     
     
-   def delete_person(id):
+def delete_person(id):
     db_name = 'PQ'
     db_connection = connect_to_db(db_name)
     cur = db_connection.cursor()
