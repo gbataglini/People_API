@@ -76,3 +76,13 @@ def add_person(newperson):
     db_connection.commit()
     return cur.lastrowid
     cur.close()
+    
+    
+   def delete_person(id):
+    db_name = 'PQ'
+    db_connection = connect_to_db(db_name)
+    cur = db_connection.cursor()
+    query = """DELETE FROM people WHERE ID = {}""".format(id)
+    cur.execute(query)
+    db_connection.commit()
+    print(cur.rowcount, "record(s) deleted")
